@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_Screen_header_section"
+        android:padding="16dp"
+        android:background="#3B7FBC">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/home_screen_my_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/my_profile"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:id="@+id/home_screen_greeding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/home_screen_my_profile"
+            android:layout_marginStart="16dp"
+            android:layout_centerVertical="true"
+            android:text="Hello, "
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/home_screen_my_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/home_screen_greeding"
+            android:layout_centerVertical="true"
+            android:text="UserName"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/home_screen_notifications"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/notification_btn"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+    </RelativeLayout>
+
+    <!-- Stories Carousel Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_Screen_recycler_view_stories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_Screen_header_section"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/story_item_card" />
+
+    <!-- Welcome Banner Section -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_banner"
+        android:layout_below="@id/home_Screen_recycler_view_stories"
+        android:layout_marginHorizontal="20dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/suggestions_bg">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/home_screen_app_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="10dp"
+                android:src="@drawable/app_logo"
+                android:elevation="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/home_screen_welcome_text"
+                android:text="Welcome To BuzzChat"
+                android:layout_below="@+id/home_screen_app_logo"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/home_screen_app_about"
+                android:layout_below="@+id/home_screen_welcome_text"
+                android:text="BuzzChat is a modern social networking app designed to connect people through seamless chat and social sharing features."
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/home_screen_app_about_link"
+                android:text="Read More"
+                android:layout_below="@+id/home_screen_app_about"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Popular Users Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_view_popular_users"
+        android:layout_below="@id/welcome_banner"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Popular Users"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_view_popular_users"
+        android:scrollbars="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_screen_recycler_view_popular_users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:background="@color/white"
+            tools:listitem="@layout/popular_users_item_card" />
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/home_screen_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text_view_popular_users"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"/>
+
+</RelativeLayout>

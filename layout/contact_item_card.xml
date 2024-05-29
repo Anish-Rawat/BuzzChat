@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#A6A4A4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/contact_image"
+                android:src="@drawable/my_profile"
+                app:civ_border_width="0.5dp"
+                app:civ_border_color="#A6A4A4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/contact_name"
+                android:layout_toRightOf="@+id/contact_image"
+                android:layout_marginStart="10dp"
+                android:text="UserName"
+                android:textStyle="bold|italic"
+                android:textSize="16sp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/contact_state"
+                android:src="@drawable/online_state"
+                android:layout_toRightOf="@+id/contact_name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/contact_nickname"
+                android:layout_toRightOf="@+id/contact_image"
+                android:layout_marginStart="10dp"
+                android:text="USerNickname"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:layout_below="@+id/contact_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/contact_about"
+                android:layout_toRightOf="@+id/contact_image"
+                android:layout_marginStart="10dp"
+                android:text="UserAbout"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:layout_below="@+id/contact_nickname"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/contact_item_accept_btn"
+                android:text="ACCEPT"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/accept_bg"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:id="@+id/contact_item_cancel_btn"
+                android:text="CANCEl"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/cancel_bg"
+                android:layout_below="@+id/contact_item_accept_btn"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

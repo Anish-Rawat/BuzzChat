@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AboutAppFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/suggestions_bg">
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:id="@+id/app_about_app_logo"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginVertical="10dp"-->
+<!--                    android:src="@drawable/app_logo"-->
+<!--                    android:elevation="5dp"/>-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_app_logo_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/app_about_app_logo"
+                        android:src="@drawable/app_logo"
+                        android:layout_centerHorizontal="true"
+                        android:background="#3B7FBC"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BuzzChat"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold|italic"
+                        android:layout_toRightOf="@+id/signup_screen_app_logo"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_intro_text"
+                    android:layout_below="@+id/app_about_app_logo_name"
+                    android:text="INTRODUCTION"
+                    android:textStyle="italic|bold"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_intro"
+                    android:layout_below="@+id/app_about_intro_text"
+                    android:text="BuzzChat is a modern social networking app designed to connect people through seamless chat and social sharing features. Our app focuses on providing an intuitive and engaging user experience, allowing users to chat, share stories, discover new friends, and stay updated with the latest activities from their connections."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_text"
+                    android:layout_below="@+id/app_about_intro"
+                    android:text="core functionalities"
+                    android:textAllCaps="true"
+                    android:textStyle="italic|bold"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_1"
+                    android:layout_below="@+id/app_about_core_functionality_text"
+                    android:text="1. Real-time Messaging:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_1_ans"
+                    android:layout_below="@+id/app_about_core_functionality_1"
+                    android:layout_marginStart="25dp"
+                    android:text="Users can send text messages, voice notes, images, and videos in real-time. Our messaging platform supports individual and group chats, making it easy to stay in touch with friends and family."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_2"
+                    android:layout_below="@+id/app_about_core_functionality_1_ans"
+                    android:text="2. Stories:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_2_ans"
+                    android:layout_below="@+id/app_about_core_functionality_2"
+                    android:layout_marginStart="25dp"
+                    android:text="Similar to Instagram and Snapchat, users can share ephemeral content in the form of stories. These stories are visible to friends for 24 hours before disappearing, promoting spontaneous and dynamic sharing."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_3"
+                    android:layout_below="@+id/app_about_core_functionality_2_ans"
+                    android:text="3. User Profiles:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_3_ans"
+                    android:layout_below="@+id/app_about_core_functionality_3"
+                    android:layout_marginStart="25dp"
+                    android:text="Each user has a personal profile showcasing their bio, profile picture, and recent activities. Users can customize their profiles to reflect their personalities and interests."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_4"
+                    android:layout_below="@+id/app_about_core_functionality_3_ans"
+                    android:text="4. Notifications:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_4_ans"
+                    android:layout_below="@+id/app_about_core_functionality_4"
+                    android:layout_marginStart="25dp"
+                    android:text="Users receive notifications for new messages, friend requests, likes, comments, and other interactions, ensuring they stay engaged and responsive."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_5"
+                    android:layout_below="@+id/app_about_core_functionality_4_ans"
+                    android:text="5. Search and Discovery:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_5_ans"
+                    android:layout_below="@+id/app_about_core_functionality_5"
+                    android:layout_marginStart="25dp"
+                    android:text="An advanced search feature helps users find friends, discover new users, and explore trending content within the app."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_6"
+                    android:layout_below="@+id/app_about_core_functionality_5_ans"
+                    android:text="6. Privacy Settings:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_core_functionality_6_ans"
+                    android:layout_below="@+id/app_about_core_functionality_6"
+                    android:layout_marginStart="25dp"
+                    android:text="Users have control over their privacy with customizable settings for who can view their profile, stories, and posts."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_text"
+                    android:layout_below="@+id/app_about_core_functionality_6_ans"
+                    android:text="Future Scope"
+                    android:textAllCaps="true"
+                    android:textStyle="italic|bold"
+                    android:textSize="18sp"
+                    android:textAlignment="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_1"
+                    android:layout_below="@+id/app_about_future_scope_text"
+                    android:text="1. Advanced Media Sharing:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_1_ans"
+                    android:layout_below="@+id/app_about_future_scope_1"
+                    android:layout_marginStart="25dp"
+                    android:text="We plan to enhance our media sharing capabilities, including support for high-definition photos, longer video uploads, and live streaming options."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_2"
+                    android:layout_below="@+id/app_about_future_scope_1_ans"
+                    android:text="2. Voice and Video Calls:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_2_ans"
+                    android:layout_below="@+id/app_about_future_scope_2"
+                    android:layout_marginStart="25dp"
+                    android:text="Introducing VoIP functionality for voice and video calls to provide a comprehensive communication platform within BuzzChat."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_3"
+                    android:layout_below="@+id/app_about_future_scope_2_ans"
+                    android:text="3. In-App Games and Activities:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_3_ans"
+                    android:layout_below="@+id/app_about_future_scope_3"
+                    android:layout_marginStart="25dp"
+                    android:text="We aim to integrate interactive games and activities that users can enjoy with their friends, enhancing the social aspect of the app."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_4"
+                    android:layout_below="@+id/app_about_future_scope_3_ans"
+                    android:text="4. Enhanced Security Features:"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_future_scope_4_ans"
+                    android:layout_below="@+id/app_about_future_scope_4"
+                    android:layout_marginStart="25dp"
+                    android:text="Continuously improving our security measures to protect user data and privacy, including end-to-end encryption for all communications."
+                    android:textStyle="italic"
+                    android:textColor="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/app_about_btn"
+                    android:text="Return Home"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="20dp"
+                    android:padding="10dp"
+                    android:background="@color/white"
+                    android:layout_below="@+id/app_about_future_scope_4_ans" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

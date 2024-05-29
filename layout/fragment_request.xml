@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestFragment"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/request_screen_text_view"
+        android:text="Friend Request"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/request_screen_recycler_view"
+        android:layout_below="@+id/request_screen_text_view"
+        tools:listitem="@layout/contact_item_card"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/request_screen_no_request_view"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/request_screen_image"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/no_request"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/request_screen_no_request_text"
+            android:layout_centerHorizontal="true"
+            android:text="No New Request"
+            android:textSize="18sp"
+            android:layout_below="@+id/request_screen_image"
+            android:textStyle="bold|italic"
+            android:textColor="#858282" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/request_screen_no_request_about"
+            android:layout_centerHorizontal="true"
+            android:text="When people send you friend request , they will appear here."
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_below="@+id/request_screen_no_request_text"
+            android:textStyle="italic"
+            android:textColor="#858282"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/request_screen_suggestions_btn"
+            android:text="See friend suggestions"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:layout_below="@+id/request_screen_no_request_about"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/suggestions_bg"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/request_screen_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
